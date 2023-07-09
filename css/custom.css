@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* bootstrap custom */
+
+
+/* list */
+ul, li{
+  list-style: none;
+}
+
+/* input */
+.search_wr{
+  position: relative;
+}
+.ip_search{
+  position: relative;
+  padding-right: 3.4rem;
+}
+.search_wr .ico_search{    
+  font-size: 2.4rem;
+  position: absolute;
+  right: 1rem;
+  top: .2rem;
+  cursor: pointer;
+}

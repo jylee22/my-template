@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+ul, li{margin: 0; padding: 0; list-style: none;}
+
+/* nav */
+header .nav{height: 100%;}
+nav .nav_link{
+  display: block;
+  height: 100%;
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  line-height: 3.8rem;
+  text-decoration: none;
+}
+
+/* nav-fix-scroll */
+.fix_header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9;
+}
+.nav_fix_scroll{
+  display: flex;
+}
+
+.nav_fix_scroll .nav_item.active .nav_link{
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/*  nav_move*/
+.nav_move{
+  position: fixed;
+  right: 0;
+  top: 50%;
+}
+.nav_move .nav_fix_scroll{
+  flex-direction: column;
+}
+.nav_move .nav_fix_scroll .nav_item.active .nav_link{
+  position: relative;
+}
+.nav_move .nav_fix_scroll .nav_item.active .nav_link::before{
+  content: '';
+  width: 4rem;
+  height: 0.4rem;
+  background-color: var(--primary);
+  position: absolute;
+  top: 50%;
+  left: -3rem;
+  transition: all 0.5s ease-in-out;
+}
+
+/* section */
+.sec-01, .sec-02, 
+.sec-03, .sec-04, .sec-05{
+  height: 100rem;
+  padding: 10rem;
+  transition: all 0.5s;
+}
+
+.sec-01{
+  background-color: aliceblue;
+}
+.sec-02{
+  background-color: skyblue;
+}
+.sec-03{
+  background-color: aliceblue;
+}
+.sec-04{
+  background-color: skyblue;
+}
+.sec-05{
+  background-color: aliceblue;
+}
+
+/* top */
+.btn_top{
+  position: fixed;
+  width: 6rem;
+  height: 6rem;
+  right: 5rem;
+  bottom: 10rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--box-shadow);
+}
